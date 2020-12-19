@@ -3,12 +3,9 @@
 
 ## 初步设想
 
-1. 客户端通过wss与服务器建立加密连接  
-2. 客服端产生公钥和私钥，向服务器注册公钥  
-3. 服务器维护公钥表  
-4. 客户端请求目标客户端公钥  
-5. 客户端采用混合加密方式，通过目标客户端公钥加密对称加密密钥，通过对称加密密钥加密要传递的信息  
-6. 目标客户端从服务器接收并读取信息  
+1. 彻底分离前后端，后端提供API用于存储数据  
+2. 客户端通过wss与服务器建立加密连接  
+3. 计划提供 WEB Android UWP  
 
 ### 加密方式
 
@@ -56,3 +53,11 @@
 客户端接收后动作：  
 1. 使用 客户端 Private Key 解密 Message 的非对称加密部分，取得 Message 的 对称加密密钥  
 2. 使用 对称加密密钥 解密 Message 的对称加密部分  
+
+**发送消息格式**
+1. type = {message, picture}
+2. content = {}
+3. senderID = senderID
+4. receiverID = receiverID
+5. dateTime = dateTime
+6. isReceive = {true, false}
