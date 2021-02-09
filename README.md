@@ -1,6 +1,9 @@
 # Ying-IM
 点对点加密通讯软件
 
+## 客户端实现
+[Yinglia-IM](https://github.com/Tolia-GH/Yinglia-IM)  来自  [Tolia-GH](https://github.com/Tolia-GH/)
+
 ## 初步设想
 
 1. 彻底分离前后端，后端提供API用于存储数据  
